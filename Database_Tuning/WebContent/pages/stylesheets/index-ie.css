@@ -1,0 +1,49 @@
+/* lte IE 9 style*/
+.header {
+	-pie-background: linear-gradient(top, #f0f0f0 0%, #f5f5f5 25%, #fcfcff 47%, #ffffff 82%,
+		white 100%);
+	position: relative;
+}
+
+.search_box {
+	-pie-background: linear-gradient(top, #d8d8db 0%, #f2eff2 100%);
+	position: relative;
+}
+
+.hmenubar li a {
+	border-radius: 2px;
+	position: relative;
+}
+
+.hmenubar li a:hover {
+	-pie-background: linear-gradient(top, #00bffe 0%, #047ad4 100%);
+	position: relative;
+}
+
+.hmenubar li a.clicked {
+	-pie-background: linear-gradient(top, #00bffe 0%, #047ad4 100%);
+	position: relative;
+}
+
+.button {
+	-pie-background: linear-gradient(top, #00bffe 0%, #047ed5 100%);
+	border-radius: 2px;
+	position: relative;
+}
+
+.button:hover {
+	-pie-background: linear-gradient(top, #047ed5 0%, #00bffe 100%);
+	border-radius: 2px;
+	position: relative;
+}
+
+.button-small {
+	-pie-background: linear-gradient(top, #00BFFE 0%, #047ED5 100%);
+	border-radius: 2px;
+	position: relative;
+}
+
+.button-small:hover {
+	-pie-background: linear-gradient(top, #047ed5 0%, #00bffe 100%);
+	position: relative;
+}

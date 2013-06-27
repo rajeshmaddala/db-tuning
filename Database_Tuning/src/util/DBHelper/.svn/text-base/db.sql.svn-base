@@ -1,0 +1,86 @@
+CREATE TABLE College(
+id NUMBER(10) PRIMARY KEY, 
+name VARCHAR2(40) NOT NULL, 
+university VARCHAR2(40) NOT NULL,
+address VARCHAR2(100) NOT NULL,
+city VARCHAR2(20) NOT NULL,
+zip VARCHAR2(6) NOT NULL,
+contactPerson VARCHAR2(60) NOT NULL,
+phoneNumber VARCHAR2(20),
+createdBy VARCHAR2(20) NOT NULL,
+createdOn TIMESTAMP NOT NULL, 
+updatedBy VARCHAR2(20) NOT NULL, 
+updatedOn TIMESTAMP NOT NULL,
+isActive CHAR(1) NOT NULL
+);
+
+CREATE TABLE Student(
+id NUMBER(10) PRIMARY KEY, 
+firstName VARCHAR2(20) NOT NULL,
+middleName VARCHAR2(20) NOT NULL, 
+lastName VARCHAR2(20) NOT NULL,	
+graduationYear INTEGER NOT NULL, 
+dob TIMESTAMP NOT NULL,
+gender CHAR(1) NOT NULL,
+collegeId NUMBER(10) REFERENCES College(id), 
+address VARCHAR2(100) NOT NULL, 
+city VARCHAR2(20) NOT NULL,
+zip VARCHAR2(6) NOT NULL, 
+phoneNumber VARCHAR2(20), 
+createdBy VARCHAR2(20) NOT NULL,
+createdOn TIMESTAMP NOT NULL, 
+updatedBy VARCHAR2(20) NOT NULL, 
+updatedOn TIMESTAMP NOT NULL, 
+isActive CHAR(1) NOT NULL
+);
+
+CREATE SEQUENCE college_KeySequence MINVALUE 1
+MAXVALUE 10000000 START WITH 1
+INCREMENT BY 1;
+
+CREATE SEQUENCE student_KeySequence MINVALUE 1
+MAXVALUE 10000000 START WITH 1
+INCREMENT BY 1;
+
+CREATE SEQUENCE bank_KeySequence MINVALUE 1
+MAXVALUE 10000000 START WITH 1
+INCREMENT BY 1;
+
+INSERT INTO College(
+id, name, university, address, city, 
+zip, contactPerson, phoneNumber, createdBy, createdOn, 
+updatedBy, updatedOn, isActive
+) 
+VALUES 
+(KeySequence.nextval, 'Navodaya College', 'North India University', 'Chandni chowk', 'Delhi',
+'445566', 'Mr Vijay', '1212123334','admin', to_date('27-05-2011:10-10-10', 'dd-mm-yyyy:HH:MI:SS'),   
+'admin', to_date('27-05-2011:10-10-10', 'dd-mm-yyyy:HH:MI:SS'),'Y'
+);
+
+INSERT INTO College(
+id, name, university, address, city, 
+zip, contactPerson, phoneNumber, createdBy, createdOn, 
+updatedBy, updatedOn, isActive
+) 
+VALUES 
+(KeySequence.nextval, 'Atmiya College', 'ILP University', 'C.G.Road', 'Mumbai',
+'675568', 'Mr Mahadevan', '7887884444','admin', to_date('27-05-2011:11-10-10', 'dd-mm-yyyy:HH:MI:SS'),   
+'admin', to_date('27-05-2011:11-10-10', 'dd-mm-yyyy:HH:MI:SS'),'Y'
+);
+
+INSERT INTO Nitin_College(
+id, name, university, address, city, 
+zip, contactPerson, phoneNumber, createdBy, createdOn, 
+updatedBy, updatedOn, isActive
+) 
+VALUES 
+(Nitin_KeySequence.nextval, 'SK College', 'Krishi University', 'Kalakota junction', 'Jaypur',
+'123555', 'Mr K D Patil', '3453368984','admin', to_date('27-05-2011:11-10-11', 'dd-mm-yyyy:HH:MI:SS'),   
+'admin', to_date('27-05-2011:11-10-11', 'dd-mm-yyyy:HH:MI:SS'),'Y'
+);
+
+INSERT INTO Student(id, firstName, middleName, lastName, graduationYear,
+		dob, gender, collegeId, address, city,zip, phoneNumber, createdBy, createdOn, updatedBy,updatedOn, isActive) 
+		VALUES (KeySequence.nextval,'anvi',2342,'chavda',2005,123,'female',1,'address','city','122221',,'anvi',,,,'Y');
+
+COMMIT;

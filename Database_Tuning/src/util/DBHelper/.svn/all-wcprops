@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/ahd04j2ee/!svn/ver/4421/a12/trunk/p1/groupa/project/NSEP_User_Management/src/com/nsep/usermanagement/util/DBHelper
+END
+db.sql
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/ahd04j2ee/!svn/ver/4421/a12/trunk/p1/groupa/project/NSEP_User_Management/src/com/nsep/usermanagement/util/DBHelper/db.sql
+END
+DBConnection.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/ahd04j2ee/!svn/ver/3923/a12/trunk/p1/groupa/project/NSEP_User_Management/src/com/nsep/usermanagement/util/DBHelper/DBConnection.java
+END
+ConnectionDtls.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/ahd04j2ee/!svn/ver/3923/a12/trunk/p1/groupa/project/NSEP_User_Management/src/com/nsep/usermanagement/util/DBHelper/ConnectionDtls.java
+END
+DateUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/ahd04j2ee/!svn/ver/3923/a12/trunk/p1/groupa/project/NSEP_User_Management/src/com/nsep/usermanagement/util/DBHelper/DateUtil.java
+END
